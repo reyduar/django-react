@@ -15,7 +15,9 @@
 
 3. _Activamos el entorno virtual_
 
-**$source ./envs/djangoreact/bin/activate**
+**$ source ./envs/djangoreact/bin/activate** -> MACBookPro
+**$ /envs/djangoreact/Scripts\activate** -> WINDOWS 10
+
 
 4. _Ahora con el entorno virtual activado asi (djangoreact), creamos el proyecto django_
 
