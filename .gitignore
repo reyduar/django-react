@@ -49,7 +49,7 @@ var/
 *.egg-info/
 .installed.cfg
 *.egg
-/rectapp/node_modules
+/djangoproj/noticiasweb-app/node_modules
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
