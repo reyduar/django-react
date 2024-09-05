@@ -41,7 +41,7 @@ source ./envs/djangoreact/bin/activate
 - Para Windows:
 
 ```bash
-cd /envs/djangoreact/
+cd envs\djangoreact
 ```
 
 ```bash
@@ -53,6 +53,22 @@ Scripts\activate
 ```bash
 django-admin startproject djangoproj
 ```
+
+> Nota: si queremos crear un modulo para el proyecto podemos usar el siguiente comando
+
+Vamos dentro del proyecto donde se encuentra nuestro manage.py
+
+```bash
+cd djangoproj
+```
+
+Corremos el siguiente comando:
+
+```bash
+python manage.py startapp noticias-api
+```
+
+en este caso hacemos todo lo relacionado a la rest api aqui
 
 5. _Ya tenemos el proyecto creado y entramos en esa carpeta y corremos el runserver para probar que todo funcione normalmente:_
 
