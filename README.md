@@ -155,19 +155,21 @@ STATICFILES_DIRS = [
 ```python
 from django.shortcuts import render
 
-def index*(request)*:
- return render(request, 'index.html')
+def index(request):
+    return render(request, 'index.html')
+```
 
 12. _Ahora vamos al archivo urls.py y importamos la views_
 
+```python
 from django.contrib import admin
 from django.urls import path
 from . import views
 
-urlpatterns \= \[
- path('admin/', admin.site.urls),
- path('', views.index, name\='index'),
-\]
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.index, name='index'),
+]
 
 ```
 
