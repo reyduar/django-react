@@ -48,6 +48,16 @@ cd envs\djangoreact
 Scripts\activate
 ```
 
+> Nota: algo importate en Visual Studio Code para que el entorno virtual reconozca nuestras libreria es seleccionar el interprete en la IDE
+
+- Entramos en VSCode
+- Presionamos CTRL + Shift
+- Ingresamos Python: Select Interpreter
+- Seleccionamos Enter interpreter path
+- Ponemos el path de nuestro envs -> /envs/djangoreact/Scripts/python.exe
+
+con esto no deberiamos tener problema como; No se ha podido resolver la importación "dotenv"
+
 4. _Ahora con el entorno virtual activado asi (djangoreact), creamos el proyecto django_
 
 ```bash
