@@ -17,7 +17,7 @@ cd django-react
 ```
 
 ```bash
-python \-m venv envs/djangoreact
+python -m venv envs/djangoreact
 ```
 
 > Nota: Si clonamos el proyecto por primera vez tenemos que instalar las librerias que se usan en el proyecto
@@ -95,12 +95,11 @@ npm start
 ```
 
 7. _Ahora vamos a ver la configuración para integrar los dos proyectos;_
+
    1. Vamos a tomar la carpeta de noticiasweb-app y la metemos dentro de la carpeta de djangoproj
    2. Ahora abrimos con VS Code la carpeta desde djangoproj y que ver los dos proyectos con este formato en el directorio de carpetas:
 
-![][image1]
-
-3. Ahora vamos a ir a la carpeta de noticiasweb-app y hacer un build
+8. Ahora vamos a ir a la carpeta de noticiasweb-app y hacer un build
 
 ```bash
 cd noticiasweb-app
@@ -122,33 +121,32 @@ import os
 9. _También vamos a la sección de TEMPLATES y en DIRS metemos esos directorios así;_
 
 ```python
-TEMPLATES \= \[
- {
- 'BACKEND': 'django.template.backends.django.DjangoTemplates',
- 'DIRS': \[os.path.join(BASE_DIR, 'noticiasweb-app/build')\],
- 'APP_DIRS': True,
- 'OPTIONS': {
- 'context_processors': \[
- 'django.template.context_processors.debug',
- 'django.template.context_processors.request',
- 'django.contrib.auth.context_processors.auth',
- 'django.contrib.messages.context_processors.messages',
- \],
- },
- },
-\]
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [os.path.join(BASE_DIR, 'noticiasweb-app/build')],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
 ```
 
 10. _Este mismo directorio noticiasweb-app/build tiene una carpeta static, a esa carpeta la tenemos que definir como un STATICFILES al final del archivo así;_
 
 ```python
-\# Static files (CSS, JavaScript, Images)
-\# https://docs.djangoproject.com/en/5.1/howto/static-files/
+# Static files (CSS, JavaScript, Images)
 
-STATIC_URL \= 'static/'
-STATICFILES_DIRS \= \[
- os.path.join(BASE_DIR, 'noticiasweb-app/build/static')
-\]
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'noticiasweb-app/build/static')
+]
 
 ```
 
